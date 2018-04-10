@@ -1,9 +1,22 @@
-これは jQuery 用の Parcel Template です。
+# Parcel Template for jQuery
 
-プログラミングを学びはじめた人向けに提供しています。
+これは jQuery 用の Parcel Template です。
 
 * [parcel](https://parceljs.org/)
 * [jquery](https://jquery.com/)
+
+プログラミングを学びはじめた人向けに提供しています。
+
+<!-- TOC -->
+
+* [Parcel Template for jQuery](#parcel-template-for-jquery)
+  * [使用方法](#使用方法)
+  * [ビルドする](#ビルドする)
+  * [Github Pages に公開する](#github-pages-に公開する)
+  * [オプション](#オプション)
+    * [パッケージをアップデート](#パッケージをアップデート)
+
+<!-- /TOC -->
 
 ## 使用方法
 
@@ -54,6 +67,18 @@ yarn の場合
 
 ```
 $ yarn start
+```
+
+## ビルドする
+
+```
+$ yarn build
+```
+
+## Github Pages に公開する
+
+```
+$ yarn deploy:gh-pages
 ```
 
 ## オプション
