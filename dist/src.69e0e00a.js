@@ -29568,21 +29568,20 @@ $(function () {
     },
     update: function update(event, ui) {}
   }); // ソート更新したらPstoreとPendingの子要素の順番を取り出す
-  // $("#Pending").on("sortupdate", function(event, ui) {
-  //   console.log(5);
-  //   for (var i = 0; i < Pstore.length; i++) {
-  //     console.log(Pstore[i].id);
-  //   }
-  //   var newArray = [];
-  //   var a = $("#Pending").children();
-  //   for (var i = 0; i < a.length; i++) {
-  //     console.log(a[i].id);
-  //     newArray.push(a[i].id);
-  //   }
-  //   console.log(Pstore);
-  // });
 
-  Pstore.sort();
+  $("#Pending").on("sortupdate", function (event, ui) {
+    console.log(5);
+    Pstore.sort(); //   for (var i = 0; i < Pstore.length; i++) {
+    //     console.log(Pstore[i].id);
+    //   }
+    //   var newArray = [];
+    //   var a = $("#Pending").children();
+    //   for (var i = 0; i < a.length; i++) {
+    //     console.log(a[i].id);
+    //     newArray.push(a[i].id);
+    //   }
+    //   console.log(Pstore);
+  });
   $cbtn.on("click", function (event) {
     var result = window.confirm("Is it really good?");
 
