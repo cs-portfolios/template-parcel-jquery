@@ -147,7 +147,6 @@ $(function() {
     receive: function(event, ui) {
       filterStore(ui);
       Pstore.push(taskData(ui));
-      updateStore();
     },
     update: function(event, ui) {}
   });
@@ -155,30 +154,60 @@ $(function() {
     receive: function(event, ui) {
       filterStore(ui);
       Istore.push(taskData(ui));
-      updateStore();
-    },
-    update: function(event, ui) {}
+    }
   });
   $("#Completed").sortable({
     receive: function(event, ui) {
       filterStore(ui);
       Cstore.push(taskData(ui));
       updateStore();
-    },
-    update: function(event, ui) {}
+    }
   });
+
+  // $("#Pending").sortable({
+  //   update: function() {
+  //     console.log(6);
+  //     var log = $(this).sortable("toArray");
+  //     console.log(log);
+  //     for (var i = 0; i < Pstore.length; i++) {
+  //       console.log(Pstore[i].id);
+  //     }
+  //     for (var i = 0; i < Pstore.length; i++) {
+  //       console.log(7);
+  //       if (Pstore[i].id != log) {
+  //         Pstore[i].id == log;
+  //       }
+  //       console.log(Pstore);
+  //     }
+  //   }
+  // });
+
+  // $(".todo-item").on({
+  //   mousedown: function() {
+  //     console.log($(this));
+  //   },
+  //   change: function() {
+  //     console.log(8);
+  //   },
+  //   mouseup: function() {
+  //     console.log(9);
+  //     $.each(Pstore, function(index, value) {
+  //       console.log(index + ": " + value);
+  //     });
+  //   }
+  // });
   // ソート更新したらPstoreとPendingの子要素の順番を取り出す
   // $("#Pending").on("sortupdate", function(event, ui) {
-  //   console.log(5);
   //   for (var i = 0; i < Pstore.length; i++) {
   //     console.log(Pstore[i].id);
   //   }
-  //   var newArray = [];
-  //   var a = $("#Pending").children();
-  //   for (var i = 0; i < a.length; i++) {
+  //   let newArray = [];
+  //   for (var i = 0; i < Pendig.child.length; i++) {
   //     console.log(a[i].id);
   //     newArray.push(a[i].id);
   //   }
+  //   Pstore[i].id.push(newArray);
+  //   updateStore();
   //   console.log(Pstore);
   // });
 
